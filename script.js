@@ -50,7 +50,7 @@ const projectData = {
 
 // Typing effect for hero section
 const typingText = document.querySelector(".typing-text")
-const roles = ["Sustainable Architecture", "Eco-Friendly Design", "Spaces in Harmony", "Natural Integration"]
+const roles = ["Arquitetura Sustentável", "Design Eco-Friendly", "Harmonia Nos Ambientes", "Iluminação Natural"]
 let roleIndex = 0
 let charIndex = 0
 let isDeleting = false
