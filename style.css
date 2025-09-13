@@ -2,7 +2,7 @@
 :root {
   --primary-bg: #fcfbf4;
   --secondary-bg: #eae7dc;
-  --primary-text: #3c3633;
+  --primary-text: #e2725b;
   --accent-color: #4a6c4f;
   --accent-hover: #3a5a3f;
   --secondary-accent: #d8c3a5;
@@ -58,12 +58,18 @@ h6 {
   line-height: 1.2;
   margin-bottom: 1rem;
 }
-
 .section__title {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 3rem;
   position: relative;
+}
+
+.logo {
+  margin-left: 70px;
+  margin-right: 70px;
+  border-radius: 70px;
+  box-shadow: var(--shadow-hover);
 }
 
 .section__title::after {
@@ -124,8 +130,8 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(198, 80, 56, 0.601);
-  backdrop-filter: blur(15px);
+  background-color: #c8f9c3;
+  backdrop-filter: blur(10px);
   z-index: 1000;
   transition: var(--transition);
   border-bottom: 1px solid var(--border-color);
@@ -146,12 +152,14 @@ h6 {
   font-weight: 700;
   color: var(--primary-text);
   text-decoration: none;
+  justify-content: left;
 }
 
 .nav__menu {
   display: flex;
   list-style: none;
   gap: 2rem;
+  justify-content: left;
 }
 
 .nav__link {
@@ -196,8 +204,8 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
-}
+  background: linear-gradient(135deg, rgba(25, 28, 32, 0.7) 0%, rgba(10, 12, 15, 0.8) 100%),
+  }
 
 .hero__container {
   max-width: var(--max-width);
@@ -254,7 +262,9 @@ h6 {
 
 .hero__video {
   position: relative;
-  border-radius: 15px;
+  margin-left: 70px;
+  margin-right: 70px;
+  border-radius: 70px;
   overflow: hidden;
   box-shadow: var(--shadow-hover);
 }
@@ -268,7 +278,13 @@ h6 {
 /* Projects Section */
 .projects {
   padding: var(--section-padding);
-  background-color: var(--secondary-bg);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(240, 240, 240, 0.2) 30%),
+    url('public/pexels-suzyhazelwood-2495651.jpg'); /* <-- COLOQUE O CAMINHO DA SUA IMAGEM AQUI */
+
+    background-size: cover; /* Garante que a imagem cubra toda a área */
+    background-position: center center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-attachment: fixed;
 }
 
 .projects__grid {
@@ -695,6 +711,7 @@ h6 {
 
   .hero__title {
     font-size: 2.5rem;
+    color : #e2725b;
   }
 
   .hero__subtitle {
