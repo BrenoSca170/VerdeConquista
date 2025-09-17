@@ -11,13 +11,13 @@ const contactForm = document.getElementById("contact-form")
 // Project data
 const projectData = {
   1: {
-    title: "Eco Villa Residence",
-    location: "São Paulo, Brazil",
-    image: "/modern-sustainable-house-with-green-roof-and-solar.jpg",
-    tags: ["Residential", "Sustainable Materials", "Solar Energy", "Green Roof"],
+    title: "Eco Telhado",
+    location: "Salvador, BA",
+    image: "/public/CasaEcoTelhado.jpg",
+    tags: ["Residencial", "Materiais Sustentaveis", "Energia Solar", "Telhado Verde"],
     description:
-      "A stunning eco-friendly residence that seamlessly integrates sustainable technologies with modern design. Features include solar panels, rainwater harvesting, green roof systems, and locally sourced materials. The home maximizes natural light and ventilation while minimizing environmental impact.",
-    galleryUrl: "#",
+      "Nós escolhemos o telhado verde , pois é uma cobertura com vegetação que une bem-estar, economia e valorização. Ele reduz o calor dentro da casa, melhora a qualidade do ar e ajuda no controle da água da chuva. Além dos benefícios ambientais, garante economia na conta de energia, aumenta a vida útil do telhado e torna o imóvel mais valorizado e atrativo no mercado. Uma escolha inteligente para quem busca conforto e futuro sustentável.",
+    
   },
   2: {
     title: "Green Office Complex",
@@ -26,7 +26,6 @@ const projectData = {
     tags: ["Commercial", "Green Walls", "Natural Lighting", "LEED Certified"],
     description:
       "A revolutionary office complex that redefines workplace sustainability. The building features extensive green walls, natural ventilation systems, and optimized daylighting. LEED Platinum certified, it reduces energy consumption by 40% compared to conventional office buildings.",
-    galleryUrl: "#",
   },
   3: {
     title: "Community Wellness Center",
@@ -35,7 +34,7 @@ const projectData = {
     tags: ["Community", "Bamboo Structure", "Landscape Integration", "Wellness"],
     description:
       "A community-centered wellness facility built primarily with sustainable bamboo. The design integrates therapeutic gardens, meditation spaces, and flexible community areas. The structure demonstrates how traditional materials can be used in contemporary architecture.",
-    galleryUrl: "#",
+    
   },
   4: {
     title: "Vertical Garden Apartments",
@@ -44,7 +43,7 @@ const projectData = {
     tags: ["Residential", "Vertical Gardens", "Water Recycling", "Urban Living"],
     description:
       "An innovative residential complex featuring extensive vertical gardens and integrated water recycling systems. Each unit has access to private garden spaces, while the building's facade acts as a living air purification system for the urban environment.",
-    galleryUrl: "#",
+    
   },
 }
 
@@ -155,6 +154,9 @@ window.addEventListener("scroll", () => {
 // Project modal functionality
 projectCards.forEach((card) => {
   card.addEventListener("click", () => {
+    const cardImage = card.querySelector(".project__image img")
+    const imageSrc = cardImage.src
+    const imageAlt =  cardImage.alt
     const projectId = card.getAttribute("data-project")
     const project = projectData[projectId]
 

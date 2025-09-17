@@ -4,12 +4,13 @@
   --secondary-bg: #eae7dc;
   --primary-text: #e2725b;
   --accent-color: #4a6c4f;
+  --secondary-text: #3a5a3f;
   --accent-hover: #3a5a3f;
   --secondary-accent: #d8c3a5;
   --border-color: #d8c3a5;
   --shadow: 0 2px 10px rgba(60, 54, 51, 0.1);
   --shadow-hover: 0 5px 20px rgba(60, 54, 51, 0.15);
-  --transition: all 0.3s ease;
+  --transition: all 3s ease;
 
   /* Typography */
   --font-heading: "Poppins", sans-serif;
@@ -66,6 +67,8 @@ h6 {
 }
 
 .logo {
+  height: 50px; /* Defina a altura desejada para o seu logo */
+  width: 50px;  /* Mantém a proporção da imagem */
   margin-left: 70px;
   margin-right: 70px;
   border-radius: 70px;
@@ -137,6 +140,29 @@ h6 {
   border-bottom: 1px solid var(--border-color);
 }
 
+/* Estilos para o container do logo (o link <a>) */
+.nav__logo .logo-container {
+  display: flex; /* Alinha os itens (imagem e texto) em linha */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 10px; /* Cria um pequeno espaço entre o logo e o texto */
+  text-decoration: none; /* Garante que não haja sublinhado */
+}
+
+/* Estilo para a imagem do logo */
+.nav__logo .logo-image {
+  height: 40px; /* Defina a altura desejada para o seu logo */
+  width: auto;  /* Mantém a proporção da imagem */
+  border-radius: 50%; /* Opcional: Deixa o logo redondo, como no seu código anterior */
+}
+
+/* Garante que o texto do logo herde a cor correta */
+.nav__logo .logo-container span {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  text-decoration: none;
+}
 .nav {
   display: flex;
   justify-content: space-between;
@@ -432,9 +458,11 @@ h6 {
   font-size: 1.1rem;
   margin-bottom: 2rem;
   line-height: 1.7;
+  color: var(--secondary-text);
 }
 
 .contact__item {
+  color: var(--secondary-text);
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -442,7 +470,7 @@ h6 {
 }
 
 .contact__item i {
-  color: var(--accent-color);
+  color: var(--secondary-text);
   font-size: 1.2rem;
 }
 
@@ -584,7 +612,7 @@ h6 {
   position: absolute;
   top: 1rem;
   right: 1.5rem;
-  color: var(--primary-text);
+  color: var(--secondary-text);
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
