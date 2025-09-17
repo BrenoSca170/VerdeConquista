@@ -717,7 +717,7 @@ h6 {
     --section-padding: 3rem 0;
   }
  .hero {
-    padding-top: 70px; /* Empurra o conteúdo para baixo na altura do header */
+    padding-top: 120px; /* Empurra o conteúdo para baixo na altura do header */
   }
   .nav__menu {
     position: fixed;
