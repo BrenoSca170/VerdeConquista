@@ -288,9 +288,10 @@ h6 {
 
 .hero__video {
   position: relative;
-  margin-left: 70px;
-  margin-right: 70px;
-  border-radius: 70px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 30px;
   overflow: hidden;
   box-shadow: var(--shadow-hover);
 }
